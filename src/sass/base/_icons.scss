@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("../assets/icon-font/tc-icons.eot?3k3r20");
+  src: url("../assets/icon-font/tc-icons.eot?3k3r20#iefix")
+      format("embedded-opentype"),
+    url("../assets/icon-font/tc-icons.ttf?3k3r20") format("truetype"),
+    url("../assets/icon-font/tc-icons.woff?3k3r20") format("woff"),
+    url("../assets/icon-font/tc-icons.svg?3k3r20#tc-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: $icomoon-font-family !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tc-icons-github {
+  &:before {
+    content: $tc-icons-github;
+  }
+}
+.tc-icons-codepen {
+  &:before {
+    content: $tc-icons-codepen;
+  }
+}
+.tc-icons-instagram {
+  &:before {
+    content: $tc-icons-instagram;
+  }
+}
+.tc-icons-linkedin {
+  &:before {
+    content: $tc-icons-linkedin;
+  }
+}

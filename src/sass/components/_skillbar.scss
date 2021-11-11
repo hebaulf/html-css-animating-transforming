@@ -1,0 +1,142 @@
+.skills {
+  background: $white;
+  border-radius: toRem(8);
+  box-shadow: $box-shadow;
+}
+
+.skills-bar {
+  padding: toRem(25) toRem(30);
+
+  .bar {
+    margin: toRem(25) toRem(0);
+
+    .info {
+      margin-bottom: toRem(8);
+      color: #07374a;
+
+      span {
+        font-size: toRem(16);
+        font-weight: $w--normal;
+      }
+    }
+  }
+
+  .progress-line {
+    position: relative;
+    height: toRem(12);
+    width: 100%;
+    background: $light-gray;
+    border-radius: toRem(12);
+
+    span {
+      position: absolute;
+      height: 100%;
+      border-radius: toRem(12);
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: $animate--cubic;
+
+      &::before {
+        @include css-triangle($color-1, left, 6px, absolute, true);
+        top: toRem(-14);
+        right: 0;
+      }
+
+      &::after {
+        @include pseudo;
+        right: 0;
+        top: toRem(-28);
+        color: $white;
+        font-size: toRem($p--small);
+        font-weight: $w--normal;
+        padding: toRem(1) toRem(8);
+        border-radius: toRem(4);
+      }
+
+      &.html {
+        width: 95%;
+        background: $color-1;
+
+        &::before {
+          border-right-color: $color-1;
+        }
+
+        &::after {
+          content: "95%";
+          background: $color-1;
+        }
+      }
+      &.css {
+        width: 85%;
+        background: $color-2;
+
+        &::before {
+          border-right-color: $color-2;
+        }
+
+        &::after {
+          content: "85%";
+          background: $color-2;
+        }
+      }
+      &.sass {
+        width: 55%;
+        background: $color-3;
+
+        &::before {
+          border-right-color: $color-3;
+        }
+
+        &::after {
+          content: "55%";
+          background: $color-3;
+        }
+      }
+      &.bootstrap {
+        width: 70%;
+        background: $color-4;
+
+        &::before {
+          border-right-color: $color-4;
+        }
+
+        &::after {
+          content: "70%";
+          background: $color-4;
+        }
+      }
+      &.javascript {
+        width: 60%;
+        background: $color-5;
+
+        &::before {
+          border-right-color: $color-5;
+        }
+
+        &::after {
+          content: "60%";
+          background: $color-5;
+        }
+      }
+      &.react {
+        width: 35%;
+        background: $color-6;
+
+        &::before {
+          border-right-color: $color-6;
+        }
+
+        &::after {
+          content: "35%";
+          background: $color-6;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}

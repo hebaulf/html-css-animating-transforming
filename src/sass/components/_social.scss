@@ -1,0 +1,58 @@
+.social {
+  display: flex;
+  margin-top: toRem(30);
+  justify-content: space-evenly;
+
+  &__link {
+    list-style: none;
+    margin: 0 1 5px;
+    width: 60px;
+    height: 60px;
+
+    a {
+      position: relative;
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: $white;
+      text-align: center;
+      transition: 0.6s;
+      border: 1px solid $gray;
+      box-shadow: $box-shadow;
+    }
+
+    &:hover {
+      a {
+        transform: translate(0, -10%);
+      }
+      a {
+        color: $white;
+      }
+    }
+    i::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+    }
+
+    &.github:hover a {
+      background-color: $color-github;
+      border-color: $color-github;
+    }
+    &.instagram:hover a {
+      background-color: $color-instagram;
+      border-color: $color-instagram;
+    }
+    &.linkedin:hover a {
+      background-color: $color-linkedin;
+      border-color: $color-linkedin;
+    }
+    &.codepen:hover a {
+      background-color: $color-codepen;
+      border-color: $color-codepen;
+    }
+  }
+}

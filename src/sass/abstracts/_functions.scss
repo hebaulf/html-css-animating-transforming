@@ -1,0 +1,31 @@
+// Strip units from sizes
+@function strip-units($number) {
+  @return math.div($number, $number * 0 + 1);
+}
+
+// Calculate rem sizes
+@function toRem($value) {
+  $remValue: math.div($value, 16);
+  @return #{$remValue}rem;
+}
+
+// Calculate clamp for
+@function calculateClamp(
+  $minimum,
+  $preferred,
+  $maximum,
+  $preferred_viewport_width: 1240px
+) {
+  // Putting variables in because all together it's not compiling
+  $clamp_parameter_1: toRem($minimum);
+  $clamp_parameter_2: strip-units(
+      (math.div($preferred + 0, $preferred_viewport_width)) * 100
+    ) * 1vw;
+  $clamp_parameter_3: toRem($maximum);
+
+  @return clamp(
+    #{$clamp_parameter_1},
+    #{$clamp_parameter_2},
+    #{$clamp_parameter_3}
+  );
+}

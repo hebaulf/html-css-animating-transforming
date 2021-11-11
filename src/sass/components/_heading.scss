@@ -1,0 +1,38 @@
+$word-colors: (
+  ($color-1, $color-2, $color-6),
+  ($color-4, $color-3, $color-5),
+  ($color-3, $color-6, $color-3),
+  ($color-2, $color-1, $color-4)
+);
+
+.title {
+  span {
+    animation: color-animation 6s linear infinite;
+
+    @each $colors in $word-colors {
+      $i: index($word-colors, $colors);
+
+      &:nth-child(#{$i}n) {
+        @each $color in $colors {
+          $i: index($colors, $color);
+          --color-#{$i}: #{$color};
+        }
+      }
+    }
+  }
+}
+
+@keyframes color-animation {
+  0% {
+    color: var(--color-1);
+  }
+  33% {
+    color: var(--color-2);
+  }
+  66% {
+    color: var(--color-3);
+  }
+  100% {
+    color: var(--color-1);
+  }
+}

@@ -1,0 +1,62 @@
+// HEADINGS
+h1,
+h2,
+h3,
+h4 {
+  font-size: 100%;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  @include responsive-gutter-1x(top, 40);
+  @include responsive-gutter-1x(bottom, 40);
+  @include font-source(false, #333, 700, 1.5);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+  font-weight: $w--semibold;
+}
+
+.h1 {
+  @include pixelsToFluidText(46, 64, 76);
+}
+
+.h2 {
+  @include pixelsToFluidText(36, 54, 64);
+}
+
+.h3 {
+  @include pixelsToFluidText(30, 42, 54);
+}
+
+.h4 {
+  @include pixelsToFluidText(24, 32, 42);
+}
+
+p {
+  @include pixelsToFluidText(14, 16, 18);
+}
+
+// BASIC TYPOGRAPHY STYLING
+ol,
+ul {
+  list-style: none;
+}
+
+// Stylistic elements
+b,
+strong {
+  font-weight: $w--bold;
+}
+
+small {
+  font-size: 80%;
+}
