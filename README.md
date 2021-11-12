@@ -14,7 +14,7 @@ I decided for this project to learn more about sass mixins, functions and using 
 
 **For my animated elements without interaction:**
 - I used fade-in and slide-up motion for the content with different delays. 
-- I also made a float up bubble background with 12 bubbles with various delay and duration and `animation-iteration-count: infinite;`. 
+- I also made a float up bubble background with 12 bubbles with various delay and duration and infinite animation iteration count. 
 
 <br>
 
