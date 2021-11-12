@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <!-- Google font Kanit --> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles --> 
     <link rel="stylesheet" href="pub/css/style.css">
 </head>
 <body>
+    <!-- Circle that follows mouse movement -->
+    <span id="mouseFollow"></span>
+    
     <main class="container">
-        <!-- Circle that follows mouse movement --> 
-        <span id="mouseFollow"></span>
-
         <!-- Heading where each word changes color --> 
         <section class="heading">
             <h2 class="h2 title">
@@ -64,7 +68,9 @@
             </ul>
         </section>
 
-        <!-- Bubble background --> 
+    </main>
+    
+    <!-- Bubble background --> 
         <ul class="bg-bubbles">
             <li></li>
             <li></li>
@@ -80,8 +86,7 @@
             <li></li>
         </ul>
 
-    </main>
-
+    <!-- JavaScript -->
     <script src="src/js/main.js"></script>
 </body>
 </html>

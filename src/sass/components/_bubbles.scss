@@ -1,3 +1,5 @@
+/* prettier-ignore */
+
 // Make bubble background fill the whole container)
 .bg-bubbles {
   position: absolute;
@@ -5,8 +7,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   z-index: -1;
+  overflow: hidden;
   background-color: $white;
 
   li {
@@ -16,54 +18,63 @@
     background-color: lighten($color-3, 15%);
     list-style: none;
     border-radius: 50%;
+    height: 40px;
+    width: 40px;
     animation-name: circle;
-    animation-duration: 25s;
-    animation-delay: 0s;
+    // animation-duration: 25s;
+    // animation-delay: 0s;
     animation-iteration-count: infinite;
     transition-timing-function: linear;
 
+    /* eslint-disable */
     &:nth-child(1) {
-      @include bubbleVariables(2%, toRem(120), 2s, 30s, lighten($color-1, 15%));
+      @include bubbleVariables(
+        -1%,
+        toRem(120),
+        2s,
+        30s,
+        lighten($color-1, 15%)
+      );
     }
     &:nth-child(2) {
-      @include bubbleVariables(10%, toRem(80), 9s, 20s, lighten($color-5, 20%));
+      @include bubbleVariables(10%, toRem(80), 9s, 16s, lighten($color-5, 20%));
     }
     &:nth-child(3) {
-      @include bubbleVariables(22%, toRem(40), 4s, 25s, lighten($color-2, 30%));
+      @include bubbleVariables(22%, toRem(40), 6s, 25s, lighten($color-2, 30%));
     }
     &:nth-child(4) {
       @include bubbleVariables(
         30%,
-        toRem(50),
-        27s,
+        toRem(90),
+        16s,
         32s,
         lighten($color-1, 30%)
       );
     }
     &:nth-child(5) {
       @include bubbleVariables(
-        70%,
-        toRem(40),
-        25s,
+        38%,
+        toRem(64),
+        11s,
         27s,
         lighten($color-3, 20%)
       );
     }
     &:nth-child(6) {
-      @include bubbleVariables(80%, toRem(35), 3s, 20s, lighten($color-2, 30%));
+      @include bubbleVariables(
+        46%,
+        toRem(35),
+        25s,
+        19s,
+        lighten($color-2, 30%)
+      );
     }
     &:nth-child(7) {
-      @include bubbleVariables(
-        35%,
-        toRem(160),
-        7s,
-        25s,
-        lighten($color-1, 30%)
-      );
+      @include bubbleVariables(50%, toRem(60), 7s, 25s, lighten($color-1, 30%));
     }
     &:nth-child(8) {
       @include bubbleVariables(
-        55%,
+        58%,
         toRem(20),
         14s,
         50s,
@@ -71,24 +82,30 @@
       );
     }
     &:nth-child(9) {
-      @include bubbleVariables(15%, toRem(50), 4s, 40s, lighten($color-4, 20%));
+      @include bubbleVariables(
+        60%,
+        toRem(110),
+        4s,
+        40s,
+        lighten($color-4, 20%)
+      );
     }
     &:nth-child(10) {
       @include bubbleVariables(
-        90%,
-        toRem(100),
-        8s,
-        16s,
+        73%,
+        toRem(40),
+        20s,
+        22s,
         lighten($color-2, 30%)
       );
     }
     &:nth-child(11) {
-      @include bubbleVariables(60%, toRem(65), 2s, 14s, lighten($color-3, 30%));
+      @include bubbleVariables(80%, toRem(65), 5s, 14s, lighten($color-3, 15%));
     }
     &:nth-child(12) {
       @include bubbleVariables(
-        40%,
-        toRem(30),
+        90%,
+        toRem(80),
         11s,
         30s,
         lighten($color-5, 30%)
@@ -96,13 +113,14 @@
     }
   }
 }
+/* eslint-enable */
 
 @-webkit-keyframes circle {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-150vh);
+    transform: translateY(-160vh);
   }
 }
 @keyframes circle {
@@ -110,6 +128,6 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-150vh);
+    transform: translateY(-160vh);
   }
 }

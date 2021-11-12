@@ -32,13 +32,14 @@
 }
 
 html {
-  height: 100%;
+  position: relative;
+  min-height: 100%;
   width: 100vw;
   overflow-x: hidden;
 }
 
 body {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   font-family: "Kanit", sans-serif;
 }
@@ -47,7 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
   min-height: 46.25rem;
   width: 80vw;
   margin-left: auto;
@@ -462,14 +463,15 @@ i {
   background-color: black;
 }
 
+/* prettier-ignore */
 .bg-bubbles {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   z-index: -1;
+  overflow: hidden;
   background-color: white;
 }
 .bg-bubbles li {
@@ -479,14 +481,15 @@ i {
   background-color: #dbebe9;
   list-style: none;
   border-radius: 50%;
+  height: 40px;
+  width: 40px;
   animation-name: circle;
-  animation-duration: 25s;
-  animation-delay: 0s;
   animation-iteration-count: infinite;
   transition-timing-function: linear;
+  /* eslint-disable */
 }
 .bg-bubbles li:nth-child(1) {
-  left: 2%;
+  left: -1%;
   height: 7.5rem;
   width: 7.5rem;
   animation-delay: 2s;
@@ -498,51 +501,51 @@ i {
   height: 5rem;
   width: 5rem;
   animation-delay: 9s;
-  animation-duration: 20s;
+  animation-duration: 16s;
   background-color: #b6c7c9;
 }
 .bg-bubbles li:nth-child(3) {
   left: 22%;
   height: 2.5rem;
   width: 2.5rem;
-  animation-delay: 4s;
+  animation-delay: 6s;
   animation-duration: 25s;
   background-color: #a4cedf;
 }
 .bg-bubbles li:nth-child(4) {
   left: 30%;
-  height: 3.125rem;
-  width: 3.125rem;
-  animation-delay: 27s;
+  height: 5.625rem;
+  width: 5.625rem;
+  animation-delay: 16s;
   animation-duration: 32s;
   background-color: #f6ddd0;
 }
 .bg-bubbles li:nth-child(5) {
-  left: 70%;
-  height: 2.5rem;
-  width: 2.5rem;
-  animation-delay: 25s;
+  left: 38%;
+  height: 4rem;
+  width: 4rem;
+  animation-delay: 11s;
   animation-duration: 27s;
   background-color: #ecf4f3;
 }
 .bg-bubbles li:nth-child(6) {
-  left: 80%;
+  left: 46%;
   height: 2.1875rem;
   width: 2.1875rem;
-  animation-delay: 3s;
-  animation-duration: 20s;
+  animation-delay: 25s;
+  animation-duration: 19s;
   background-color: #a4cedf;
 }
 .bg-bubbles li:nth-child(7) {
-  left: 35%;
-  height: 10rem;
-  width: 10rem;
+  left: 50%;
+  height: 3.75rem;
+  width: 3.75rem;
   animation-delay: 7s;
   animation-duration: 25s;
   background-color: #f6ddd0;
 }
 .bg-bubbles li:nth-child(8) {
-  left: 55%;
+  left: 58%;
   height: 1.25rem;
   width: 1.25rem;
   animation-delay: 14s;
@@ -550,44 +553,45 @@ i {
   background-color: #f7e4e4;
 }
 .bg-bubbles li:nth-child(9) {
-  left: 15%;
-  height: 3.125rem;
-  width: 3.125rem;
+  left: 60%;
+  height: 6.875rem;
+  width: 6.875rem;
   animation-delay: 4s;
   animation-duration: 40s;
   background-color: #ecd39d;
 }
 .bg-bubbles li:nth-child(10) {
-  left: 90%;
-  height: 6.25rem;
-  width: 6.25rem;
-  animation-delay: 8s;
-  animation-duration: 16s;
+  left: 73%;
+  height: 2.5rem;
+  width: 2.5rem;
+  animation-delay: 20s;
+  animation-duration: 22s;
   background-color: #a4cedf;
 }
 .bg-bubbles li:nth-child(11) {
-  left: 60%;
+  left: 80%;
   height: 4.0625rem;
   width: 4.0625rem;
-  animation-delay: 2s;
+  animation-delay: 5s;
   animation-duration: 14s;
-  background-color: white;
+  background-color: #dbebe9;
 }
 .bg-bubbles li:nth-child(12) {
-  left: 40%;
-  height: 1.875rem;
-  width: 1.875rem;
+  left: 90%;
+  height: 5rem;
+  width: 5rem;
   animation-delay: 11s;
   animation-duration: 30s;
   background-color: #d3dede;
 }
 
+/* eslint-enable */
 @-webkit-keyframes circle {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-150vh);
+    transform: translateY(-160vh);
   }
 }
 @keyframes circle {
@@ -595,7 +599,7 @@ i {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-150vh);
+    transform: translateY(-160vh);
   }
 }
 
