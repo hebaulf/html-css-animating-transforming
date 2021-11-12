@@ -5,29 +5,26 @@
 
   &__link {
     list-style: none;
-    margin: 0 1 5px;
-    width: 60px;
-    height: 60px;
+    margin: 0;
+    width: toRem(60);
+    height: toRem(60);
 
     a {
       position: relative;
       display: block;
-      width: 60px;
-      height: 60px;
+      width: toRem(60);
+      height: toRem(60);
       border-radius: 50%;
       background-color: $white;
       text-align: center;
       transition: 0.6s;
-      border: 1px solid $gray;
       box-shadow: $box-shadow;
     }
 
     &:hover {
       a {
-        transform: translate(0, -10%);
-      }
-      a {
         color: $white;
+        transform: translate(0, -10%);
       }
     }
     i::before {
@@ -35,24 +32,20 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 30px;
+      font-size: toRem(30);
     }
 
     &.github:hover a {
       background-color: $color-github;
-      border-color: $color-github;
     }
     &.instagram:hover a {
       background-color: $color-instagram;
-      border-color: $color-instagram;
     }
     &.linkedin:hover a {
       background-color: $color-linkedin;
-      border-color: $color-linkedin;
     }
     &.codepen:hover a {
       background-color: $color-codepen;
-      border-color: $color-codepen;
     }
   }
 }

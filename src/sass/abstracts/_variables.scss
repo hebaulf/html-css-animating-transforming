@@ -1,11 +1,14 @@
-/* COLORS */
+/* COLOR VARIABLES*/
+// Base colors
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 $light-gray: hsl(0, 0%, 93%);
 $gray: hsl(0, 0%, 71%);
 
+// Font color
 $font-color: hsl(0, 0%, 11%);
 
+// Main colors
 $color-1: hsl(21, 67%, 59%);
 $color-2: hsl(198, 48%, 46%);
 $color-3: hsl(173, 27%, 74%);
@@ -13,12 +16,14 @@ $color-4: hsl(41, 67%, 57%);
 $color-5: hsl(185, 15%, 55%);
 $color-6: hsl(1, 53%, 78%);
 
+// Social colors
 $color-github: hsl(0, 5%, 9%);
 $color-instagram: hsl(349, 75%, 57%);
 $color-linkedin: hsl(201, 100%, 35%);
 $color-codepen: hsl(0, 0%, 0%);
 
-/* FONTS */
+/* FONT VARIABLES */
+// Base fonts
 $font-family: "Kanit", sans-serif;
 $html-font-size: 100%;
 
@@ -31,27 +36,6 @@ $tc-icons-instagram: "\e902";
 $tc-icons-linkedin: "\e903";
 
 // Font sizes
-$h--1: (
-  base: 30,
-  tablet: 36,
-  desktop: 44,
-);
-$h--2: (
-  base: 26,
-  tablet: 30,
-  desktop: 36,
-);
-$h--3: (
-  base: 22,
-  tablet: 26,
-  desktop: 30,
-);
-$h--4: (
-  base: 20,
-  tablet: 22,
-  desktop: 26,
-);
-
 $p: 16;
 $p--small: 12;
 $p--medium: 18;
@@ -64,8 +48,11 @@ $w--semibold: 600;
 $w--bold: 700;
 $w--heavy: 800;
 
+/* OTHER VARIABLES */
+
 // Box Shadow
 $box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 
-// Animation
+// Animations
 $animate--cubic: animate 2.6s cubic-bezier(1, 0, 0.5, 1) forwards;
+$animate--word-color: color-animation 6s linear infinite;

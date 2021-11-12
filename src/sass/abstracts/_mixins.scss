@@ -1,73 +1,46 @@
-// add/remove margins
-@mixin push--ends($spacing: $spacing-unit) {
-  margin: {
-    top: $spacing;
-    bottom: $spacing;
-  }
-}
-@mixin push--sides($spacing: $spacing-unit) {
-  margin: {
-    left: $spacing;
-    right: $spacing;
-  }
-}
+// margin sides auto mixin
 @mixin push--auto {
   margin: {
     left: auto;
     right: auto;
   }
 }
-@mixin offset--sides($spacing: $spacing-unit) {
-  margin: {
-    left: -$spacing;
-    right: -$spacing;
-  }
-}
-@mixin flush--ends {
-  margin: {
-    top: 0;
-    bottom: 0;
-  }
-}
-@mixin flush--sides {
-  margin: {
-    left: 0;
-    right: 0;
-  }
-}
 
-// add/remove paddings
-@mixin soft--ends($spacing: $spacing-unit) {
-  padding: {
-    top: $spacing;
-    bottom: $spacing;
-  }
-}
-@mixin soft--sides($spacing: $spacing-unit) {
-  padding: {
-    left: $spacing;
-    right: $spacing;
-  }
-}
-@mixin hard--ends {
-  padding: {
-    top: 0;
-    bottom: 0;
-  }
-}
-@mixin hard--sides {
-  padding: {
-    left: 0;
-    right: 0;
-  }
-}
-
-// Pseudo element
+// Pseudo element mixin
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
   content: $content;
   display: $display;
   position: $pos;
 }
+
+@mixin bubbleVariables(
+  $position: false,
+  $size: false,
+  $delay: false,
+  $duration: false,
+  $color: false
+) {
+  @if $position {
+    left: $position;
+  }
+  @if $size {
+    height: $size;
+    width: $size;
+  }
+  @if $delay {
+    animation-delay: $delay;
+  }
+  @if $duration {
+    animation-duration: $duration;
+  }
+  @if $color {
+    background-color: $color;
+  }
+}
+/* 
+  Usage:
+  @include bubbleVariables($position, $size, $delay, $duration, $color);
+*/
 
 // font setting (for font-size, colour, font-weight and line-height)
 @mixin font-source($size: false, $colour: false, $weight: false, $lh: false) {
@@ -95,7 +68,7 @@
   $minimum,
   $preferred,
   $maximum,
-  $preferred_viewport_width: 1140
+  $preferred_viewport_width: 980
 ) {
   /* Fallback for IE11 */
   font-size: toRem($preferred);

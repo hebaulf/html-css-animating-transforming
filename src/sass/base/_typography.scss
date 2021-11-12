@@ -1,4 +1,4 @@
-// HEADINGS
+// Headings
 h1,
 h2,
 h3,
@@ -19,12 +19,6 @@ h4 {
   }
 }
 
-a {
-  text-decoration: none;
-  color: $font-color;
-  font-weight: $w--semibold;
-}
-
 .h1 {
   @include pixelsToFluidText(46, 64, 76);
 }
@@ -41,11 +35,18 @@ a {
   @include pixelsToFluidText(24, 32, 42);
 }
 
+// Paragraph
 p {
   @include pixelsToFluidText(14, 16, 18);
 }
 
 // BASIC TYPOGRAPHY STYLING
+a {
+  text-decoration: none;
+  color: $font-color;
+  font-weight: $w--semibold;
+}
+
 ol,
 ul {
   list-style: none;

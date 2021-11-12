@@ -12,12 +12,7 @@
 
     .info {
       margin-bottom: toRem(8);
-      color: #07374a;
-
-      span {
-        font-size: toRem(16);
-        font-weight: $w--normal;
-      }
+      color: $font-color;
     }
   }
 
@@ -37,15 +32,16 @@
       animation: $animate--cubic;
 
       &::before {
+        // mixin included for triangle that creates the arrow from percentage bubble on progress line
         @include css-triangle($color-1, left, 6px, absolute, true);
-        top: toRem(-14);
+        top: toRem(13);
         right: 0;
       }
 
       &::after {
         @include pseudo;
         right: 0;
-        top: toRem(-28);
+        top: toRem(18);
         color: $white;
         font-size: toRem($p--small);
         font-weight: $w--normal;

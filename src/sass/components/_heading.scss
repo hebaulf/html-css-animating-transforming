@@ -1,14 +1,16 @@
 $word-colors: (
   ($color-1, $color-2, $color-6),
   ($color-4, $color-3, $color-5),
-  ($color-3, $color-6, $color-3),
+  ($color-5, $color-6, $color-3),
   ($color-2, $color-1, $color-4)
 );
 
 .title {
   span {
-    animation: color-animation 6s linear infinite;
+    animation: $animate--word-color;
 
+    // this function iterates through the $word-colors variable above
+    // so each word goes through all the colors
     @each $colors in $word-colors {
       $i: index($word-colors, $colors);
 

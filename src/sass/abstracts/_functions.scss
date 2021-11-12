@@ -14,7 +14,7 @@
   $minimum,
   $preferred,
   $maximum,
-  $preferred_viewport_width: 1240px
+  $preferred_viewport_width: 980px
 ) {
   // Putting variables in because all together it's not compiling
   $clamp_parameter_1: toRem($minimum);
