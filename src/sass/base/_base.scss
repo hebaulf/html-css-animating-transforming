@@ -26,8 +26,13 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  // toRem() is a sass functio created to convert pixel sizes to rem sizes
+  // so toRem(740) is converting 740px to a rem size (or root element font-size, here 16px)
+  // see line 7 in _functions.scss
   min-height: toRem(740);
   width: 80vw;
+  // push-auto mixin which sets margin-left and margin-right to auto,
+  // this centers an element on page that has a max-width
   @include push--auto;
 }
 
@@ -63,6 +68,7 @@ body {
   animation-delay: 1.5s;
 }
 
+// opacity and transfom animation
 @-webkit-keyframes slideUp {
   0% {
     opacity: 0;

@@ -31,14 +31,17 @@
       transform-origin: left;
       animation: $animate--cubic;
 
+      // This is the arrow that leads up from the box/bubble with the percentage number of the progress bar
       &::before {
-        // mixin included for triangle that creates the arrow from percentage bubble on progress line
+        // mixin included for the triangle that creates the arrow
         @include css-triangle($color-1, left, 6px, absolute, true);
         top: toRem(13);
         right: 0;
       }
 
+      // This is the box/bubble with the percentage number of the progress bar
       &::after {
+        // Mixin for pseudo element (see line 10 in _mixins.scss)
         @include pseudo;
         right: 0;
         top: toRem(18);
@@ -49,6 +52,7 @@
         border-radius: toRem(4);
       }
 
+      // Below is width, color, and content of each progress bar and info box/bubble
       &.html {
         width: 95%;
         background: $color-1;
@@ -131,6 +135,12 @@
   }
 }
 
+// Animation for slide in of progress bar
+@-webkit-keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
 @keyframes animate {
   100% {
     transform: scaleX(1);

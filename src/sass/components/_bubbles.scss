@@ -1,5 +1,3 @@
-/* prettier-ignore */
-
 // Make bubble background fill the whole container)
 .bg-bubbles {
   position: absolute;
@@ -11,6 +9,7 @@
   overflow: hidden;
   background-color: $white;
 
+  // Each bubble has the styles below
   li {
     display: block;
     position: absolute;
@@ -21,12 +20,18 @@
     height: 40px;
     width: 40px;
     animation-name: circle;
-    // animation-duration: 25s;
-    // animation-delay: 0s;
+    animation-duration: 25s;
+    animation-delay: 0s;
     animation-iteration-count: infinite;
     transition-timing-function: linear;
 
-    /* eslint-disable */
+    // Here below each bubble gets its own position, size, delay, duration and color.
+    // I created a sass mixin for this (line 16 in _mixins.scss) and here is the formula:
+    // @include bubbleVariables(position, size, delay, duration, background-color).
+
+    // I am using Prettier and JSLint and either of those is breaking some of the code
+    // into seperate lines and not others when I save the file and I did not
+    // find a quick fix for this so sorry about that.
     &:nth-child(1) {
       @include bubbleVariables(
         -1%,
@@ -113,8 +118,10 @@
     }
   }
 }
-/* eslint-enable */
 
+// The transformation of circles
+// From starting point of bubble position witch is 160px below the bottom of page
+// to above the top of the page which is set here to 160% of the viewport height.
 @-webkit-keyframes circle {
   0% {
     transform: translateY(0);

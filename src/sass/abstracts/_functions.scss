@@ -1,15 +1,15 @@
-// Strip units from sizes
+/*********************** strip unit from number ***********************/
 @function strip-units($number) {
   @return math.div($number, $number * 0 + 1);
 }
 
-// Calculate rem sizes
+/*********************** Calculate rem sizes ***********************/
 @function toRem($value) {
   $remValue: math.div($value, 16);
   @return #{$remValue}rem;
 }
 
-// Calculate clamp for
+/*********************** Calculate clamp ***********************/
 @function calculateClamp(
   $minimum,
   $preferred,

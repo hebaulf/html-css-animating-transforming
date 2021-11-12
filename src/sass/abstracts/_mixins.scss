@@ -1,18 +1,22 @@
-// margin sides auto mixin
+/*********************** Margin auto mixin ***********************/
 @mixin push--auto {
   margin: {
     left: auto;
     right: auto;
   }
 }
-
-// Pseudo element mixin
+/*********************** Pseudo element mixin ***********************/
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
   content: $content;
   display: $display;
   position: $pos;
 }
 
+/*********************** Bubble style mixin ***********************/
+/* 
+  Usage: (set "false" if style should not be used)
+  @include bubbleVariables($position, $size, $delay, $duration, $color);
+*/
 @mixin bubbleVariables(
   $position: false,
   $size: false,
@@ -37,12 +41,12 @@
     background-color: $color;
   }
 }
-/* 
-  Usage:
-  @include bubbleVariables($position, $size, $delay, $duration, $color);
-*/
 
-// font setting (for font-size, colour, font-weight and line-height)
+/*********************** Font Mixin ***********************/
+/* 
+  Usage: (set "false" if style should not be used)
+  @include font-source($size, $colour, $weight, $lh);
+*/
 @mixin font-source($size: false, $colour: false, $weight: false, $lh: false) {
   font-family: $font-family;
   @if $size {
@@ -59,11 +63,12 @@
   }
 }
 
-/***************************/
-/* Fluid text */
-
-/* The font will by default be at the preferrred size 
-   on 1240px viewport. */
+/*********************** Fluid text ***********************/
+// The font will by default be at the preferred size on 980px viewport.
+/* 
+    Usage:
+    @include pixelsToFluidText(24px, 38px, 60px);
+*/
 @mixin pixelsToFluidText(
   $minimum,
   $preferred,
@@ -79,13 +84,12 @@
     $preferred_viewport_width
   );
 }
+
+/*********************** Fluid gutters ***********************/
 /* 
     Usage:
-    @include pixelsToFluidText(24px, 38px, 60px);
+    @include responsive-gutter-1x(bottom);
 */
-
-/***************************/
-/* Fluid gutters */
 @mixin responsive-gutter-1x($direction: bottom, $gutter: 36px) {
   @if $direction == top {
     margin-top: $gutter;
@@ -101,11 +105,11 @@
     @error "Unknown direction #{$direction}.";
   }
 }
+
 /* 
     Usage:
-    @include responsive-gutter-1x(bottom);
+    @include responsive-gutter-2x(bottom);
 */
-
 @mixin responsive-gutter-2x($direction: bottom, $gutter: 36px) {
   @if $direction == top {
     margin-top: ($gutter * 2);
@@ -117,11 +121,8 @@
     @error "Unknown direction #{$direction}.";
   }
 }
-/* 
-    Usage:
-    @include responsive-gutter-2x(bottom);
-*/
 
+/*********************** Triangle pseudo element mixin ***********************/
 // Mixin for making the triangle for the tooltip
 @mixin css-triangle(
   $color,

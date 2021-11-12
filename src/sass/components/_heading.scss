@@ -10,7 +10,7 @@ $word-colors: (
     animation: $animate--word-color;
 
     // this function iterates through the $word-colors variable above
-    // so each word goes through all the colors
+    // so each word goes through all the colors in the variable
     @each $colors in $word-colors {
       $i: index($word-colors, $colors);
 
@@ -24,6 +24,7 @@ $word-colors: (
   }
 }
 
+// Animation for changing the color of each word
 @keyframes color-animation {
   0% {
     color: var(--color-1);

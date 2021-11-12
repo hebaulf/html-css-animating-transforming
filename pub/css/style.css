@@ -1,20 +1,27 @@
-/* COLOR VARIABLES*/
-/* FONT VARIABLES */
-/* OTHER VARIABLES */
+/***************** COLOR VARIABLES *****************/
+/***************** FONT VARIABLES *****************/
+/***************** OTHER VARIABLES *****************/
+/*********************** strip unit from number ***********************/
+/*********************** Calculate rem sizes ***********************/
+/*********************** Calculate clamp ***********************/
+/*********************** Margin auto mixin ***********************/
+/*********************** Pseudo element mixin ***********************/
+/*********************** Bubble style mixin ***********************/
 /* 
-  Usage:
+  Usage: (set "false" if style should not be used)
   @include bubbleVariables($position, $size, $delay, $duration, $color);
 */
-/***************************/
-/* Fluid text */
-/* The font will by default be at the preferrred size 
-   on 1240px viewport. */
+/*********************** Font Mixin ***********************/
+/* 
+  Usage: (set "false" if style should not be used)
+  @include font-source($size, $colour, $weight, $lh);
+*/
+/*********************** Fluid text ***********************/
 /* 
     Usage:
     @include pixelsToFluidText(24px, 38px, 60px);
 */
-/***************************/
-/* Fluid gutters */
+/*********************** Fluid gutters ***********************/
 /* 
     Usage:
     @include responsive-gutter-1x(bottom);
@@ -23,6 +30,7 @@
     Usage:
     @include responsive-gutter-2x(bottom);
 */
+/*********************** Triangle pseudo element mixin ***********************/
 *,
 *:before,
 *:after {
@@ -412,6 +420,11 @@ i {
   background: #e5aaa9;
 }
 
+@-webkit-keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
 @keyframes animate {
   100% {
     transform: scaleX(1);
@@ -463,7 +476,6 @@ i {
   background-color: black;
 }
 
-/* prettier-ignore */
 .bg-bubbles {
   position: absolute;
   top: 0;
@@ -484,9 +496,10 @@ i {
   height: 40px;
   width: 40px;
   animation-name: circle;
+  animation-duration: 25s;
+  animation-delay: 0s;
   animation-iteration-count: infinite;
   transition-timing-function: linear;
-  /* eslint-disable */
 }
 .bg-bubbles li:nth-child(1) {
   left: -1%;
@@ -585,7 +598,6 @@ i {
   background-color: #d3dede;
 }
 
-/* eslint-enable */
 @-webkit-keyframes circle {
   0% {
     transform: translateY(0);
